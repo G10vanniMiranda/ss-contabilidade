@@ -1,7 +1,20 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div className='bg-black w-full h-96 flex items-center justify-center'>
-      <h1 className='text-white text-4xl font-bold'>SS CONTABILIDADE</h1>
+    <div className='w-full h-screen flex flex-col items-center justify-center bg-gray-100'>
+
+      <div className="relative w-full h-96">
+
+        <Image
+          src="/imagem.jpg"
+          alt="SS Contabilidade"
+          fill
+          className="object-cover w-full h-full"
+        />
+
+      </div>
+
     </div>
   );
 }
