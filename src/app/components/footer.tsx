@@ -19,7 +19,9 @@ export default function Footer() {
                 <div className='flex gap-4 py-2'>
 
                     <FaFacebook className='text-white text-3xl' />
+
                     <FaInstagram className='text-white text-3xl' />
+
                     <FaWhatsapp className='text-white text-3xl' />
 
                 </div>
