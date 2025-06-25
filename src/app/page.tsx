@@ -1,7 +1,6 @@
 'use client';
 
 import { FaStar } from "react-icons/fa6";
-import WhatsAppButton from "./components/saibamais";
 import { motion } from "motion/react";
 import SaibaMAisButton from "./components/saibamais";
 import Image from "next/image";
