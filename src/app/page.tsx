@@ -1,9 +1,11 @@
 'use client';
 
-import { FaStar } from "react-icons/fa6";
-import { motion } from "motion/react";
-import SaibaMAisButton from "./components/saibamais";
 import Image from "next/image";
+import { motion } from "motion/react";
+import { FaStar } from "react-icons/fa6";
+import SaibaMAisButton from "./components/saibamais";
+import CardServico from "./components/CardServico";
+import CardIncentivos from "./components/CardIncentivos";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
         whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -100 }}
         transition={{ duration: .8, ease: "easeInOut" }}
-        className="w-full h-64 mt-10 md:h-[690px] 
+        className="w-full h-64 mt-10 md:h-[690px]
         bg-[url(/imagem.jpg)] bg-cover bg-center bg-no-repeat"
       >
       </motion.div>
@@ -115,6 +117,110 @@ export default function Home() {
         >
           <Image src="/planejamento.jpg" alt="Planejamento contábil e documentos" fill className="object-cover" />
         </motion.div>
+
+      </section>
+
+      {/**Sessão 4*/}
+      <section className="w-full h-auto flex flex-col items-center justify-center gap-6 bg-gray-100 py-10 px-4 md:px-20">
+
+        <motion.div
+          initial={{ opacity: 0, y: -80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="w-full max-w-3xl text-center"
+        >
+
+          <h1 className="text-black text-3xl md:text-4xl font-bold mb-4">Serviços Contábeis</h1>
+
+          <p className="text-black">
+            Oferecemos consultoria especializada em incentivos fiscais e recuperação de créditos tributários para clientes em todo o Brasil.
+          </p>
+
+        </motion.div>
+
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full max-w-6xl">
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="w-full md:w-auto"
+          >
+            <CardServico
+              imagem={""}
+              alt={"Chicara de café com documentos"}
+              titulo={"Legalização Empresarial"}
+              descricao={"Apoio completo na legalização de empresas, garantindo conformidade com as normas fiscais e trabalhistas."}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="w-full md:w-auto"
+          >
+            <CardServico
+              imagem={""}
+              alt={"Consultoria Fiscal"}
+              titulo={"Consultoria Fiscal"}
+              descricao={"Especialistas em benefícios fiscais, ajudando sua empresa a maximizar recursos e reduzir custos tributários."}
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="w-full md:w-auto"
+          >
+            <CardServico
+              imagem={""}
+              alt={"Recuperação de Créditos"}
+              titulo={"Recuperação de Créditos"}
+              descricao={"Atendemos todas as áreas contábeis, incluindo RH, fiscal e consultoria empresarial para seu sucesso."}
+            />
+          </motion.div>
+
+        </div>
+
+      </section>
+
+      {/**Sessão 5*/}
+      <section className="w-full h-auto flex flex-col items-center justify-center bg-zinc-600 py-10 px-4 md:px-20">
+
+        <h1 className="text-white text-center text-3xl md:text-4xl font-bold mb-4">Incentivos Fiscais <br /> Rondônia</h1>
+
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full max-w-6xl mt-6">
+
+          <CardIncentivos
+            imagem={"/santos.jpeg"}
+            alt={"Regime Especial para Importação"}
+            titulo={"Regime Especial para Importação"}
+            descricao={"Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída. Possibilidade de desembaraço em qualquer porto aduaneiro do Brasil."}
+            botaoTexto={"Saiba Mais"}
+            botaoLink={"/incentivos"}
+          />
+
+          <CardIncentivos
+            imagem={"/incentivos.png"}
+            alt={"Regime Especial para Industrias"}
+            titulo={"Regime Especial para Industrias"}
+            descricao={"Regime Especial para Indústrias: Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída."}
+            botaoTexto={"Saiba Mais"}
+            botaoLink={"/incentivos"}
+          />
+
+          <CardIncentivos
+            imagem={"/atacado.jpg"}
+            alt={"Regime Especial para Atacadistas"}
+            titulo={"Regime Especial para Atacadistas"}
+            descricao={"Guajará-Mirim – Área de Livre Comércio: Crédito presumido de até 75% sobre o ICMS nas operações realizadas na região."}
+            botaoTexto={"Saiba Mais"}
+            botaoLink={"/incentivos"}
+          />
+
+        </div>
 
       </section>
 
