@@ -234,7 +234,7 @@ export default function Home() {
 
           <DepoimentoCard
             nome="João Silva"
-            imagem="/gio.png"
+            imagem="/joao.jpg"
             alt="João Silva"
             depoimento="A SS Contabilidade transformou nossa gestão financeira! Com expertise em incentivos fiscais, recuperamos créditos tributários e melhoramos nossa eficiência. Recomendo a todos!"
           />
@@ -258,13 +258,17 @@ export default function Home() {
       </section>
 
       {/**Sessão 7*/}
-      <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-100 py-10 px-4 md:px-20">
+      <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-700 py-10 px-4 md:px-20">
 
-        <h2 className="text-3xl font-bold text-black text-center mb-6">Contato Rápido</h2>
+        <h2 className="text-3xl font-bold text-white text-center mb-6">Contato Rápido</h2>
 
-        <p className="text-black text-center mb-4">
+        <p className="text-white text-center mb-4">
           Entre em contato para serviços de contabilidade e consultoria fiscal.
         </p>
+
+        <div className="bg-white w-96 h-96">
+
+        </div>
 
       </section>
 

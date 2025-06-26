@@ -18,11 +18,17 @@ export default function Footer() {
 
                 <div className='flex gap-4 py-2'>
 
-                    <FaFacebook className='text-white text-3xl' />
+                    <Link href="https://www.facebook.com/sscontabilidade" target="_blank">
+                        <FaFacebook className='text-white text-3xl' />
+                    </Link>
 
-                    <FaInstagram className='text-white text-3xl' />
+                    <Link href="https://www.instagram.com/sscontabilidadeconsultoria/?__pwa=1#" target="_blank">
+                        <FaInstagram className='text-white text-3xl' />
+                    </Link>
 
-                    <FaWhatsapp className='text-white text-3xl' />
+                    <Link href="https://wa.me/5569993533868" target="_blank">
+                        <FaWhatsapp className='text-white text-3xl' />
+                    </Link>
 
                 </div>
 
