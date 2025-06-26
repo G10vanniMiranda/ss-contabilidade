@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa6";
 import SaibaMAisButton from "./components/saibamais";
 import CardServico from "./components/CardServico";
 import CardIncentivos from "./components/CardIncentivos";
-import DepoimentoCard from "./components/DepoimentoCard";
 
 export default function Home() {
   return (
@@ -145,10 +144,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-            className="flex-1 md:w-auto"
+            className="w-full md:w-auto"
           >
             <CardServico
-              imagem={"/legalizacao.jpg"}
+              imagem={""}
               alt={"Chicara de café com documentos"}
               titulo={"Legalização Empresarial"}
               descricao={"Apoio completo na legalização de empresas, garantindo conformidade com as normas fiscais e trabalhistas."}
@@ -159,10 +158,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            className="flex-1 md:w-auto"
+            className="w-full md:w-auto"
           >
             <CardServico
-              imagem={"/consultoria.jpg"}
+              imagem={""}
               alt={"Consultoria Fiscal"}
               titulo={"Consultoria Fiscal"}
               descricao={"Especialistas em benefícios fiscais, ajudando sua empresa a maximizar recursos e reduzir custos tributários."}
@@ -173,10 +172,10 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
-            className="flex-1 md:w-auto"
+            className="w-full md:w-auto"
           >
             <CardServico
-              imagem={"/recuperacao.jpg"}
+              imagem={""}
               alt={"Recuperação de Créditos"}
               titulo={"Recuperação de Créditos"}
               descricao={"Atendemos todas as áreas contábeis, incluindo RH, fiscal e consultoria empresarial para seu sucesso."}
@@ -200,16 +199,16 @@ export default function Home() {
             titulo={"Regime Especial para Importação"}
             descricao={"Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída. Possibilidade de desembaraço em qualquer porto aduaneiro do Brasil."}
             botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
+            botaoLink={"/incentivos"}
           />
 
           <CardIncentivos
-            imagem={"/industrias.jpg"}
+            imagem={"/incentivos.png"}
             alt={"Regime Especial para Industrias"}
             titulo={"Regime Especial para Industrias"}
             descricao={"Regime Especial para Indústrias: Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída."}
             botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
+            botaoLink={"/incentivos"}
           />
 
           <CardIncentivos
@@ -218,53 +217,10 @@ export default function Home() {
             titulo={"Regime Especial para Atacadistas"}
             descricao={"Guajará-Mirim – Área de Livre Comércio: Crédito presumido de até 75% sobre o ICMS nas operações realizadas na região."}
             botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
+            botaoLink={"/incentivos"}
           />
 
         </div>
-
-      </section>
-
-      {/**Sessão 6*/}
-      <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-500 py-10 px-4 md:px-20">
-
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Depoimentos de Clientes</h2>
-
-        <div className="flex flex-col md:flex-row gap-10 mt-10 items-center justify-center w-full md:max-w-6xl">
-
-          <DepoimentoCard
-            nome="João Silva"
-            imagem="/gio.png"
-            alt="João Silva"
-            depoimento="A SS Contabilidade transformou nossa gestão financeira! Com expertise em incentivos fiscais, recuperamos créditos tributários e melhoramos nossa eficiência. Recomendo a todos!"
-          />
-
-          <DepoimentoCard
-            nome="Maria Oliveira"
-            imagem="/maria.jpg"
-            alt="Maria Oliveira"
-            depoimento="A equipe da SS Contabilidade é extremamente profissional e dedicada. Graças a eles, conseguimos otimizar nossos processos e reduzir custos."
-          />
-
-          <DepoimentoCard
-            nome="Carlos Pereira"
-            imagem="/carlos.jpg"
-            alt="Carlos Pereira"
-            depoimento="Excelente serviço! A SS Contabilidade nos ajudou a entender melhor nossos direitos e a aproveitar os incentivos fiscais disponíveis. Muito satisfeito!"
-          />
-
-        </div>
-
-      </section>
-
-      {/**Sessão 7*/}
-      <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-100 py-10 px-4 md:px-20">
-
-        <h2 className="text-3xl font-bold text-black text-center mb-6">Contato Rápido</h2>
-
-        <p className="text-black text-center mb-4">
-          Entre em contato para serviços de contabilidade e consultoria fiscal.
-        </p>
 
       </section>
 

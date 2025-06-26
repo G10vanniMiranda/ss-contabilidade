@@ -9,7 +9,7 @@ export default function Menu() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='fixed top-0 left-0 w-full z-50 bg-white md:h-28 h-16 flex items-center justify-between px-10 md:px-20'>
+        <div className='fixed top-0 left-0 w-full z-50 bg-white md:h-28 h-12 flex items-center justify-between px-10 md:px-20'>
 
             <Image src="/logo.png" alt="logo" width={100} height={100} />
 
