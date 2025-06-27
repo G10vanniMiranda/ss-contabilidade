@@ -4,45 +4,49 @@ import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 
 export default function Footer() {
     return (
-        <div className='bg-black w-full h-auto flex flex-col md:flex-row gap-4 p-6'>
+        <div className='bg-black w-full h-auto flex flex-col gap-4 p-6'>
 
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col md:flex-row justify-evenly gap-10'>
 
-                <h1 className='text-white text-2xl font-bold'>Serviços</h1>
+                <div className='flex flex-col gap-4'>
 
-                <div className='flex flex-col gap-2'>
-                    <h2 className='text-white'>Contabilidade e consultoria para todo o Brasil.</h2>
-                    <h2 className='text-white'>Localização: Avenida Presidente Dutra, 3500</h2>
-                    <h2 className='text-white'>Bairro Olaria - Porto Velho - RO</h2>
+                    <h1 className='text-white text-2xl font-bold'>Serviços</h1>
+
+                    <div className='flex flex-col gap-2'>
+                        <h2 className='text-white'>Contabilidade e consultoria para todo o Brasil.</h2>
+                        <h2 className='text-white'>Localização: Avenida Presidente Dutra, 3500</h2>
+                        <h2 className='text-white'>Bairro Olaria - Porto Velho - RO</h2>
+                    </div>
+
+                    <div className='flex gap-4 py-2'>
+
+                        <Link href="https://www.facebook.com/sscontabilidade" target="_blank">
+                            <FaFacebook className='text-white text-3xl' />
+                        </Link>
+
+                        <Link href="https://www.instagram.com/sscontabilidadeconsultoria/?__pwa=1#" target="_blank">
+                            <FaInstagram className='text-white text-3xl' />
+                        </Link>
+
+                        <Link href="https://wa.me/5569993533868" target="_blank">
+                            <FaWhatsapp className='text-white text-3xl' />
+                        </Link>
+
+                    </div>
+
                 </div>
 
-                <div className='flex gap-4 py-2'>
+                <div className='flex flex-col gap-4'>
 
-                    <Link href="https://www.facebook.com/sscontabilidade" target="_blank">
-                        <FaFacebook className='text-white text-3xl' />
-                    </Link>
+                    <h2 className='text-white text-2xl font-bold'>Entre em contato:</h2>
 
-                    <Link href="https://www.instagram.com/sscontabilidadeconsultoria/?__pwa=1#" target="_blank">
-                        <FaInstagram className='text-white text-3xl' />
-                    </Link>
+                    <div className='flex flex-col gap-2'>
+                        <h2 className='text-white'>Telefone: +55 (69) 99353-3868</h2>
+                        <h2 className='text-white'>Telefone: +55 (69) 99386-6168</h2>
+                        <h2 className='text-white'>williansscontabilidade@gmail.com</h2>
+                        <h2 className='text-white'>atendimento.sscontabilidade@gmail.com</h2>
+                    </div>
 
-                    <Link href="https://wa.me/5569993533868" target="_blank">
-                        <FaWhatsapp className='text-white text-3xl' />
-                    </Link>
-
-                </div>
-
-            </div>
-
-            <div className='flex flex-col gap-4'>
-
-                <h2 className='text-white text-2xl font-bold'>Entre em contato:</h2>
-
-                <div className='flex flex-col gap-2'>
-                    <h2 className='text-white'>Telefone: +55 (69) 99353-3868</h2>
-                    <h2 className='text-white'>Telefone: +55 (69) 99386-6168</h2>
-                    <h2 className='text-white'>williansscontabilidade@gmail.com</h2>
-                    <h2 className='text-white'>atendimento.sscontabilidade@gmail.com</h2>
                 </div>
 
             </div>
