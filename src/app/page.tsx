@@ -266,7 +266,53 @@ export default function Home() {
           Entre em contato para serviços de contabilidade e consultoria fiscal.
         </p>
 
-        <div className="bg-white w-96 h-96">
+        <div className="bg-white w-[350px] md:w-[500px] h-[560px] md:h-[510px] rounded-xl p-5">
+
+          <form className="mt-10 space-y-4 text-left">
+            <input
+              type="text"
+              placeholder="Seu nome"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <textarea
+              placeholder="Sua mensagem"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white rounded-xl py-3 font-semibold hover:bg-blue-700 transition"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-5">
+
+            <a
+              href="https://wa.me/SEUNUMERO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-green-500 text-white w-full px-6 py-3 rounded-xl hover:bg-green-600 transition"
+            >
+              <i className="fa fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a
+              href="mailto:email@seudominio.com"
+              className="flex items-center justify-center gap-2 bg-gray-700 text-white w-full px-6 py-3 rounded-xl hover:bg-gray-900 transition"
+            >
+              <i className="fa fa-envelope"></i> E-mail
+            </a>
+
+          </div>
 
         </div>
 
