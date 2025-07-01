@@ -13,8 +13,17 @@ export default function Servico() {
                 </div>
 
                 <div className="w-full h-auto flex flex-col md:flex-row items-center justify-center mt-10 relative">
-                    <div className="w-80 h-60 bg-red-400 relative z-0"></div>
-                    <div className="w-64 h-56 bg-blue-400 absolute left-1/2 -translate-x-1/2 -bottom-28 z-10 shadow-lg"></div>
+
+                    <div className="w-full h-auto flex flex-col items-center justify-center mt-10 relative">
+                        <div className="w-80 h-60 bg-red-400 rounded-xl relative z-0"></div>
+                        <div className="w-64 h-56 bg-blue-400 absolute left-1/2 -translate-x-1/2 -bottom-28 z-10 shadow-lg"></div>
+                    </div>
+
+                    <div className="w-full h-auto flex flex-col items-center justify-center mt-40 relative">
+                        <div className="w-80 h-60 bg-red-400 rounded-xl relative z-0"></div>
+                        <div className="w-64 h-56 bg-blue-400 absolute left-1/2 -translate-x-1/2 -bottom-28 z-10 shadow-lg"></div>
+                    </div>
+
                 </div>
 
             </section>
