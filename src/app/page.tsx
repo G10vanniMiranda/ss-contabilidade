@@ -7,11 +7,11 @@ import SaibaMAisButton from "./components/saibamais";
 import CardServico from "./components/CardServico";
 import CardIncentivos from "./components/CardIncentivos";
 import DepoimentoCard from "./components/DepoimentoCard";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className='w-full md:h-auto flex flex-col items-center 
-    justify-center bg-gray-100 mt-1'>
+    <div className='w-full md:h-auto flex flex-col items-center justify-center bg-gray-100 mt-1'>
 
       {/**Sessão 1*/}
       <motion.div
@@ -194,32 +194,53 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row gap-6 items-center justify-center w-full max-w-6xl mt-6">
 
-          <CardIncentivos
-            imagem={"/santos.jpeg"}
-            alt={"Regime Especial para Importação"}
-            titulo={"Regime Especial para Importação"}
-            descricao={"Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída. Possibilidade de desembaraço em qualquer porto aduaneiro do Brasil."}
-            botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="flex-1 md:w-auto"
+          >
+            <CardIncentivos
+              imagem={"/santos.jpeg"}
+              alt={"Regime Especial para Importação"}
+              titulo={"Regime Especial para Importação"}
+              descricao={"Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída. Possibilidade de desembaraço em qualquer porto aduaneiro do Brasil."}
+              botaoTexto={"Saiba Mais"}
+              botaoLink={"https://wa.me/5569993533868"}
+            />
+          </motion.div>
 
-          <CardIncentivos
-            imagem={"/industrias.jpg"}
-            alt={"Regime Especial para Industrias"}
-            titulo={"Regime Especial para Industrias"}
-            descricao={"Regime Especial para Indústrias: Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída."}
-            botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="flex-1 md:w-auto"
+          >
+            <CardIncentivos
+              imagem={"/industrias.jpg"}
+              alt={"Regime Especial para Industrias"}
+              titulo={"Regime Especial para Industrias"}
+              descricao={"Regime Especial para Indústrias: Diferimento do ICMS na entrada para a saída, com crédito presumido de até 85% sobre o ICMS das operações de saída."}
+              botaoTexto={"Saiba Mais"}
+              botaoLink={"https://wa.me/5569993533868"}
+            />
+          </motion.div>
 
-          <CardIncentivos
-            imagem={"/atacado.jpg"}
-            alt={"Regime Especial para Atacadistas"}
-            titulo={"Regime Especial para Atacadistas"}
-            descricao={"Guajará-Mirim – Área de Livre Comércio: Crédito presumido de até 75% sobre o ICMS nas operações realizadas na região."}
-            botaoTexto={"Saiba Mais"}
-            botaoLink={"https://wa.me/5569993533868"}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="flex-1 md:w-auto"
+          >
+            <CardIncentivos
+              imagem={"/atacado.jpg"}
+              alt={"Regime Especial para Atacadistas"}
+              titulo={"Regime Especial para Atacadistas"}
+              descricao={"Guajará-Mirim – Área de Livre Comércio: Crédito presumido de até 75% sobre o ICMS nas operações realizadas na região."}
+              botaoTexto={"Saiba Mais"}
+              botaoLink={"https://wa.me/5569993533868"}
+            />
+          </motion.div>
 
         </div>
 
@@ -296,21 +317,21 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-5">
 
-            <a
-              href="https://wa.me/SEUNUMERO"
+            <Link
+              href="https://wa.me/5569993533868"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-green-500 text-white w-full px-6 py-3 rounded-xl hover:bg-green-600 transition"
             >
               <i className="fa fa-whatsapp"></i> WhatsApp
-            </a>
+            </Link>
 
-            <a
-              href="mailto:email@seudominio.com"
+            <Link
+              href="mailto:williansscontabilidade@gmail.com"
               className="flex items-center justify-center gap-2 bg-gray-700 text-white w-full px-6 py-3 rounded-xl hover:bg-gray-900 transition"
             >
               <i className="fa fa-envelope"></i> E-mail
-            </a>
+            </Link>
 
           </div>
 
