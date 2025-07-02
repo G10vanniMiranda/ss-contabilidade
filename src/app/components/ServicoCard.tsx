@@ -17,9 +17,9 @@ export default function ServicoCard({
     onClick,
 }: ServicoCardProps) {
     return (
-        <div className="gap-4 mt-4 md:mt-8 relative">
+        <div className="w-auto gap-4 mt-4 md:mt-8 relative">
 
-            <div className="w-80 md:w-[550px] h-72 flex flex-col md:flex-row items-center justify-center mt-10 md:mt-0 relative">
+            <div className="w-[300px] md:w-[350px] lg:w-[490px] xl:w-[600px] h-72 flex flex-col md:flex-row items-center justify-center mt-10 md:mt-0 relative">
 
                 <Image
                     src={imagem}
