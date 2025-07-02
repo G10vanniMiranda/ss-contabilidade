@@ -1,4 +1,4 @@
-import Image from "next/image"
+import ServicoCard from "../components/ServicoCard";
 
 export default function Servico() {
     return (
@@ -14,46 +14,20 @@ export default function Servico() {
 
                 </div>
 
-                <div className="w-full flex flex-col md:flex-row gap-10">
-                    <div className="flex-1 gap-4 mt-10 relative ">
+                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
 
-                        <div className="w-full h-auto md:h-[300px] flex flex-col items-center justify-center mt-10 md:mt-0 relative">
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Recuperação de Créditos"
+                        descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
+                    />
 
-                            <Image src="/recuperacao.jpg" quality={100} fill alt="Imagem" className="md:w-[492px] bg-red-400 rounded-xl relative z-0"></Image>
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Consultoria Fiscal"
+                        descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
+                    />
 
-                            <div className="w-64 h-56 md:w-[90%] flex flex-col items-center p-4 bg-white absolute left-1/2 -translate-x-1/2 -bottom-28 z-10">
-
-                                <h1 className="text-2xl font-bold text-center mt-4">Recuperação de Créditos</h1>
-
-                                <p className="mt-2 text-center">Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente.</p>
-
-                                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Saiba Mais</button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div className="flex-1 gap-4 mt-10 relative ">
-
-                        <div className="w-full h-auto md:h-[300px] flex flex-col items-center justify-center mt-10 md:mt-0 relative">
-
-                            <Image src="/recuperacao.jpg" quality={100} fill alt="Imagem" className="md:w-[492px] bg-red-400 rounded-xl relative z-0"></Image>
-
-                            <div className="w-64 h-56 md:w-[90%] flex flex-col items-center p-4 bg-white absolute left-1/2 -translate-x-1/2 -bottom-28 z-10">
-
-                                <h1 className="text-2xl font-bold text-center mt-4">Recuperação de Créditos</h1>
-
-                                <p className="mt-2 text-center">Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente.</p>
-
-                                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Saiba Mais</button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
 
             </section>
