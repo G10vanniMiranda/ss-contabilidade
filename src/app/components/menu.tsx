@@ -9,7 +9,7 @@ export default function Menu() {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='fixed top-0 left-0 w-full z-50 bg-white md:h-28 h-12 flex items-center justify-between px-10 md:px-20'>
+        <div className='fixed top-0 left-0 w-full h-20 md:h-28 z-50 bg-white flex items-center justify-between p-8 md:px-28'>
 
             <Image src="/logo.png" alt="logo" width={100} height={100} />
 
@@ -20,14 +20,13 @@ export default function Menu() {
             >
                 <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
                 <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
-                <span className="block w-8 h-1 bg-black rounded"></span>
+                <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
             </button>
 
-            <div className='hidden md:flex items-center gap-6'>
+            <div className='hidden md:flex items-center gap-10'>
                 <Link href="/" className='text-black'>Inicio</Link>
                 <Link href="/servico" className='text-black'>Serviços</Link>
                 <Link href="/sobre" className='text-black'>Sobre</Link>
-                <Link href="/contato" className='text-black'>Contato</Link>
             </div>
 
             {open && (
@@ -40,7 +39,6 @@ export default function Menu() {
                         <Link href="/" className='text-black'>Inicio</Link>
                         <Link href="/servico" className='text-black'>Serviços</Link>
                         <Link href="/sobre" className='text-black'>Sobre</Link>
-                        <Link href="/contato" className='text-black'>Contato</Link>
                     </div>
                 </div>
             )}
