@@ -12,7 +12,7 @@ export default function Sobre() {
 
                 </div>
 
-                <div className="w-80 md:w-full h-[400px] md:h-96 flex flex-col md:flex-row gap-8 md:gap-28 md:px-20">
+                <div className="w-80 md:w-full h-[400px] md:h-60 lg:h-44 flex flex-col md:flex-row gap-8 md:gap-28 md:px-20">
 
                     <div className="flex flex-col gap-2">
 
@@ -39,15 +39,30 @@ export default function Sobre() {
             </section>
 
             {/* LOCALIZAÇÃO */}
-            <section className="w-full h-auto flex flex-col items-center gap-10 bg-gray-100 p-2">
+            <section className="w-full h-auto flex flex-col md:flex-row items-center gap-10 bg-gray-100 p-2">
 
-                <div className="w-80 h-24 md:w-full flex flex-col justify-end">
+                <div className="w-80 h-24 md:w-[580px] flex flex-col justify-end gap-4 mt-64 md:mt-36 md:px-20">
 
-                    <h1 className="text-3xl font-semibold">Localização</h1>
+                    <div className="flex flex-col gap-2">
+                        <h1 className="text-3xl font-semibold">Localização</h1>
+                        <p className="text-black w-720">
+                            Atendemos clientes em todo o Brasil, oferecendo serviços de contabilidade, recuperação de créditos tributários e incentivos fiscais.
+                        </p>
+                    </div>
 
-                    <p className="text-black w-72 ">
-                        Rua Exemplo, 123 - Centro, São Paulo - SP
-                    </p>
+                    <div className="flex flex-col gap-2">
+                        <h1 className="text-black text-xl font-semibold">Endereço</h1>
+                        <p className="text-black w-720">
+                            Av Presidente Dutra, 3500, Olaria - Porto Velho - RO
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <h1 className="text-black text-xl font-semibold">Horário</h1>
+                        <p className="text-black w-720">
+                            Seg a Sex - 08:00 até 12:00 e 14:00 até as 18:00
+                        </p>
+                    </div>
 
                 </div>
 
