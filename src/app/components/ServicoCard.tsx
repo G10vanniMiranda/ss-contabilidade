@@ -5,16 +5,12 @@ interface ServicoCardProps {
     imagem: string;
     titulo: string;
     descricao: string;
-    botaoTexto?: string;
-    onClick?: () => void;
 }
 
 export default function ServicoCard({
     imagem,
     titulo,
     descricao,
-    botaoTexto = "Saiba Mais",
-    onClick,
 }: ServicoCardProps) {
     return (
         <div className="w-auto gap-4 mt-4 md:mt-8 relative">
