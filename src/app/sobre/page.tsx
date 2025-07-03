@@ -4,7 +4,7 @@ export default function Sobre() {
         <div className="w-full h-auto flex flex-col items-center justify-center">
 
             {/* SOBRE */}
-            <section className="w-full h-auto flex flex-col items-center gap-10 mt-20 md:mt-28 bg-gray-100 p-2 md:p-4">
+            <section className="w-full h-auto flex flex-col items-center gap-10 mt-20 md:mt-28  p-2 md:p-4">
 
                 <div className="w-80 h-24 md:w-full flex flex-col items-center md:items-start md:px-20 justify-end">
 
@@ -39,7 +39,7 @@ export default function Sobre() {
             </section>
 
             {/* LOCALIZAÇÃO */}
-            <section className="w-full h-auto flex flex-col md:flex-row items-center gap-10 md:gap-0 bg-gray-100 p-2">
+            <section className="w-full h-auto flex flex-col md:flex-row items-center gap-10 md:gap-0  p-2">
 
                 <div className="w-80 h-24 md:w-[580px] flex flex-col justify-end gap-4 mt-64 md:mt-36 md:px-20">
 

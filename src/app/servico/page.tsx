@@ -2,7 +2,7 @@ import ServicoCard from "../components/ServicoCard";
 
 export default function Servico() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center bg-gray-100 ">
+        <div className="w-full h-auto flex flex-col items-center justify-center  ">
 
             <section className="w-full md:max-w-[1280px] mx-auto h-auto flex flex-col items-center mt-20 md:mt-28 p-4 pb-32">
 
