@@ -22,7 +22,7 @@ export default function ServicoCard({
                     quality={100}
                     fill
                     alt={titulo}
-                    className="bg-red-400 rounded-xl object-cover relative z-0"
+                    className="rounded-xl object-cover relative z-0"
                 />
 
                 <div className="w-72 h-36 md:w-[90%] flex flex-col items-center p-2 bg-white absolute left-1/2 -translate-x-1/2 -bottom-28 z-10">
