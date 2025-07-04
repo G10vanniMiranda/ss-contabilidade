@@ -1,16 +1,26 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoIosCloseCircleOutline } from 'react-icons/io'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Menu() {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <div className='fixed top-0 left-0 w-full h-20 md:h-28 z-50 bg-white flex items-center justify-between p-8 md:px-28'>
-
+        <div className={`fixed top-0 left-0 w-full h-20 md:h-28 z-50 bg-white flex items-center justify-between p-8 md:px-28 transition-shadow duration-300 ${scrolled ? "shadow-md border-b border-gray-200" : ""}`}>
             <Image src="/logo.png" alt="logo" width={100} height={100} />
 
             <button
@@ -24,9 +34,27 @@ export default function Menu() {
             </button>
 
             <div className='hidden md:flex items-center gap-10'>
-                <Link href="/" className='text-black'>Inicio</Link>
-                <Link href="/servico" className='text-black'>Serviços</Link>
-                <Link href="/sobre" className='text-black'>Sobre</Link>
+                <Link
+                    href="/"
+                    className={`text-black border-b-2 transition ${pathname === "/" ? "border-black" : "border-transparent hover:border-black"
+                        }`}
+                >
+                    Inicio
+                </Link>
+                <Link
+                    href="/servico"
+                    className={`text-black border-b-2 transition ${pathname === "/servico" ? "border-black" : "border-transparent hover:border-black"
+                        }`}
+                >
+                    Serviços
+                </Link>
+                <Link
+                    href="/sobre"
+                    className={`text-black border-b-2 transition ${pathname === "/sobre" ? "border-black" : "border-transparent hover:border-black"
+                        }`}
+                >
+                    Sobre
+                </Link>
             </div>
 
             {open && (
@@ -36,9 +64,30 @@ export default function Menu() {
                     </div>
 
                     <div className='flex flex-col items-center gap-4'>
-                        <Link href="/" className='text-black'>Inicio</Link>
-                        <Link href="/servico" className='text-black'>Serviços</Link>
-                        <Link href="/sobre" className='text-black'>Sobre</Link>
+                        <Link
+                            href="/"
+                            onClick={() => setOpen(false)}
+                            className={`text-black border-b-2 transition ${pathname === "/" ? "border-black" : "border-transparent hover:border-black"
+                                }`}
+                        >
+                            Inicio
+                        </Link>
+                        <Link
+                            href="/servico"
+                            onClick={() => setOpen(false)}
+                            className={`text-black border-b-2 transition ${pathname === "/servico" ? "border-black" : "border-transparent hover:border-black"
+                                }`}
+                        >
+                            Serviços
+                        </Link>
+                        <Link
+                            href="/sobre"
+                            onClick={() => setOpen(false)}
+                            className={`text-black border-b-2 transition ${pathname === "/sobre" ? "border-black" : "border-transparent hover:border-black"
+                                }`}
+                        >
+                            Sobre
+                        </Link>
                     </div>
                 </div>
             )}
