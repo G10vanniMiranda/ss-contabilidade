@@ -281,6 +281,17 @@ export default function Home() {
       {/**Sessão 7*/}
       <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-700 py-10 px-4 md:px-20">
 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover z-[-1]"
+        >
+          <source src="/videos/video2.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos HTML5.
+        </video>
+
         <h2 className="text-3xl font-bold text-white text-center mb-6">Contato Rápido</h2>
 
         <p className="text-white text-center mb-4">
