@@ -31,6 +31,7 @@ export default function Menu() {
                 <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
                 <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
                 <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
+
             </button>
 
             <div className='hidden md:flex items-center gap-10'>
@@ -41,6 +42,7 @@ export default function Menu() {
                 >
                     Inicio
                 </Link>
+
                 <Link
                     href="/servico"
                     className={`text-black border-b-2 transition ${pathname === "/servico" ? "border-black" : "border-transparent hover:border-black"
@@ -48,6 +50,7 @@ export default function Menu() {
                 >
                     Serviços
                 </Link>
+
                 <Link
                     href="/sobre"
                     className={`text-black border-b-2 transition ${pathname === "/sobre" ? "border-black" : "border-transparent hover:border-black"
@@ -59,6 +62,7 @@ export default function Menu() {
 
             {open && (
                 <div className="md:hidden absolute top-0 left-0 w-full h-96 bg-white flex flex-col items-center justify-center gap-6">
+
                     <div className='absolute top-4 right-4 cursor-pointer' onClick={() => setOpen(false)}>
                         <IoIosCloseCircleOutline className='text-black text-3xl' />
                     </div>
@@ -72,6 +76,7 @@ export default function Menu() {
                         >
                             Inicio
                         </Link>
+
                         <Link
                             href="/servico"
                             onClick={() => setOpen(false)}
@@ -80,6 +85,7 @@ export default function Menu() {
                         >
                             Serviços
                         </Link>
+
                         <Link
                             href="/sobre"
                             onClick={() => setOpen(false)}
@@ -89,6 +95,7 @@ export default function Menu() {
                             Sobre
                         </Link>
                     </div>
+
                 </div>
             )}
 

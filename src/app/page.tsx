@@ -8,8 +8,23 @@ import CardServico from "./components/CardServico";
 import CardIncentivos from "./components/CardIncentivos";
 import DepoimentoCard from "./components/DepoimentoCard";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [btnAcesso, setBtnAcesso] = useState("");
+  const [formShow, setFormShow] = useState("hidden");
+
+  const handleSaibaMaisClick = () => {
+    setBtnAcesso("hidden");
+    setFormShow("block");
+  }
+
+  const handleFormHidden = () => {
+    setBtnAcesso("");
+    alert("Mensagem enviada com sucesso!");
+    setFormShow("hidden");
+  }
+
   return (
     <div className='w-full md:h-auto flex flex-col items-center justify-center bg-gray-100 mt-1'>
 
@@ -279,76 +294,94 @@ export default function Home() {
       </section>
 
       {/**Sessão 7*/}
-      <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-700 py-10 px-4 md:px-20">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+        className="relative w-full h-96 md:h-[690px] overflow-hidden"
+      >
 
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover z-[-1]"
+          className="w-full h-full object-cover z-[-99]"
         >
           <source src="/videos/video2.mp4" type="video/mp4" />
           Seu navegador não suporta vídeos HTML5.
         </video>
 
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Contato Rápido</h2>
+        <div className=" absolute inset-0 bg-opacity-50 z-0 flex flex-col items-center justify-center">
+          <h2 className="text-3xl font-bold text-white text-center mb-6 ">Contato Rápido</h2>
+          <button onClick={handleSaibaMaisClick} className={`bg-blue-400 p-2 text-white rounded-lg px-5 mb-5 ${btnAcesso}`}>Entrar em contato</button>
 
-        <p className="text-white text-center mb-4">
-          Entre em contato para serviços de contabilidade e consultoria fiscal.
-        </p>
+          <p className="text-white text-center mb-4 ">
+            Entre em contato para serviços de contabilidade e consultoria fiscal.
+          </p>
 
-        <div className="bg-white w-[350px] md:w-[500px] h-[560px] md:h-[510px] rounded-xl p-5">
+          <div className={`bg-white w-[350px] md:w-[500px] h-[560px] md:h-[510px] rounded-xl p-5 shadow-lg ${formShow}`}>
 
-          <form className="mt-10 space-y-4 text-left">
-            <input
-              type="text"
-              placeholder="Seu nome"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Seu e-mail"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <textarea
-              placeholder="Sua mensagem"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white rounded-xl py-3 font-semibold hover:bg-blue-700 transition"
-            >
-              Enviar mensagem
-            </button>
-          </form>
+            <form action="https://formsubmit.co/williansscontabilidade@gmail.com" method="POST" className="mt-10 space-y-4 text-left">
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-5">
+              <input
+                type="text"
+                name="nome"
+                placeholder="Seu nome"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
 
-            <Link
-              href="https://wa.me/5569993533868"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-green-500 text-white w-full px-6 py-3 rounded-xl hover:bg-green-600 transition"
-            >
-              <i className="fa fa-whatsapp"></i> WhatsApp
-            </Link>
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu e-mail"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
 
-            <Link
-              href="mailto:williansscontabilidade@gmail.com"
-              className="flex items-center justify-center gap-2 bg-gray-700 text-white w-full px-6 py-3 rounded-xl hover:bg-gray-900 transition"
-            >
-              <i className="fa fa-envelope"></i> E-mail
-            </Link>
+              <textarea
+                name="mensagem"
+                placeholder="Sua mensagem"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 h-32 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+
+              <button
+                type="submit"
+                onClick={handleFormHidden}
+                className="w-full bg-blue-600 text-white rounded-xl py-3 font-semibold hover:bg-blue-700 transition"
+              >
+                Enviar mensagem
+              </button>
+
+            </form>
+
+            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-5">
+
+              <Link
+                href="https://wa.me/5569993533868"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-green-500 text-white w-full px-6 py-3 rounded-xl hover:bg-green-600 transition"
+              >
+                <i className="fa fa-whatsapp"></i> WhatsApp
+              </Link>
+
+              <Link
+                href="mailto:williansscontabilidade@gmail.com"
+                className="flex items-center justify-center gap-2 bg-gray-700 text-white w-full px-6 py-3 rounded-xl hover:bg-gray-900 transition"
+              >
+                <i className="fa fa-envelope"></i> E-mail
+              </Link>
+
+            </div>
 
           </div>
 
         </div>
-
-      </section>
+      </motion.div>
 
     </div>
   );

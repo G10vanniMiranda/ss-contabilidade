@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from "motion/react";
 
 export default function Sobre() {
     return (
@@ -37,6 +40,16 @@ export default function Sobre() {
                 </div>
 
             </section>
+
+            <motion.div
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: .8, ease: "easeInOut" }}
+                className="w-full h-64 mt-10 md:h-[690px]
+                bg-[url(/imagem.jpg)] bg-cover bg-center bg-no-repeat"
+            >
+            </motion.div>
 
             {/* LOCALIZAÇÃO */}
             <section className="w-full h-auto flex flex-col md:flex-row items-center gap-10 md:gap-0  p-2">

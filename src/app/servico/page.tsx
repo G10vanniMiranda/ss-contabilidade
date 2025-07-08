@@ -30,6 +30,38 @@ export default function Servico() {
 
                 </div>
 
+                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
+
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Recuperação de Créditos"
+                        descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
+                    />
+
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Consultoria Fiscal"
+                        descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
+                    />
+
+                </div>
+
+                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
+
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Recuperação de Créditos"
+                        descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
+                    />
+
+                    <ServicoCard
+                        imagem="/recuperacao.jpg"
+                        titulo="Consultoria Fiscal"
+                        descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
+                    />
+
+                </div>
+
             </section>
 
         </div>
