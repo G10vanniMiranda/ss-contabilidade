@@ -7,7 +7,7 @@ export default function Sobre() {
         <div className="w-full h-auto flex flex-col items-center justify-center">
 
             {/* SOBRE */}
-            <section className="w-full h-auto flex flex-col items-center gap-10 mt-20 md:mt-28  p-2 md:p-4">
+            <section className="w-full h-auto flex flex-col items-center gap-10 md:mt-20 p-2 md:p-4">
 
                 <div className="w-80 h-24 md:w-full flex flex-col items-center md:items-start md:px-20 justify-end">
 
@@ -46,13 +46,13 @@ export default function Sobre() {
                 whileInView={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -100 }}
                 transition={{ duration: .8, ease: "easeInOut" }}
-                className="w-full h-64 mt-10 md:h-[690px]
+                className="w-full h-64 md:h-[690px]
                 bg-[url(/imagem.jpg)] bg-cover bg-center bg-no-repeat"
             >
             </motion.div>
 
             {/* LOCALIZAÇÃO */}
-            <section className="w-full h-auto flex flex-col md:flex-row items-center gap-10 md:gap-0  p-2">
+            <section className="w-full h-auto flex flex-col md:flex-row items-center md:mt-10 gap-10 md:gap-0 p-2">
 
                 <div className="w-80 h-24 md:w-[580px] flex flex-col justify-end gap-4 mt-64 md:mt-36 md:px-20">
 

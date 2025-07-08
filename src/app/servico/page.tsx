@@ -14,50 +14,50 @@ export default function Servico() {
 
                 </div>
 
-                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
+                <div className="w-full h-auto flex flex-col md:flex-row gap-20 md:gap-8 items-center justify-center">
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
+                        imagem="/anexo1.avif"
                         titulo="Recuperação de Créditos"
                         descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
                     />
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
+                        imagem="/anexo2.avif"
                         titulo="Consultoria Fiscal"
                         descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
                     />
 
                 </div>
 
-                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
+                <div className="w-full h-auto flex flex-col md:flex-row gap-20 md:gap-8 items-center justify-center mt-20">
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
-                        titulo="Recuperação de Créditos"
-                        descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
+                        imagem="/anexo3.avif"
+                        titulo="Incentivos Fiscais"
+                        descricao="Recuperação de créditos tributários e benefícios fiscais."
                     />
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
-                        titulo="Consultoria Fiscal"
-                        descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
+                        imagem="/anexo4.avif"
+                        titulo="Regularização Fiscal"
+                        descricao="Apoio completo em legalização e contabilidade para empresas."
                     />
 
                 </div>
 
-                <div className="w-full h-auto flex flex-col md:flex-row gap-32 md:gap-8 items-center justify-center">
+                <div className="w-full h-auto flex flex-col md:flex-row gap-20 md:gap-8 items-center justify-center mt-20">
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
-                        titulo="Recuperação de Créditos"
-                        descricao="Identificamos e recuperamos créditos tributários que podem beneficiar sua empresa financeiramente."
+                        imagem="/anexo5.avif"
+                        titulo="RH e Folha de Pagamento"
+                        descricao="Gestão estratégica de pessoas e processos salariais, garantindo conformidade legal, eficiência e valorização dos colaboradores."
                     />
 
                     <ServicoCard
-                        imagem="/recuperacao.jpg"
-                        titulo="Consultoria Fiscal"
-                        descricao="Ajudamos empresas a maximizar benefícios fiscais e a entender suas obrigações tributárias."
+                        imagem="/anexo6.avif"
+                        titulo="Contabilidade"
+                        descricao="Organização financeira, cumprimento de obrigações fiscais e apoio estratégico para a saúde e crescimento do negócio."
                     />
 
                 </div>
