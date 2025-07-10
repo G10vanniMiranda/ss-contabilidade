@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "SS Contabilidade",
-  description: "Especialista em Importação",
+  description: "Escritorio de Contabilidade especialista em Importação",
 };
 
 export default function RootLayout({

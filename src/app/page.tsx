@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <div className='w-full md:h-auto flex flex-col items-center justify-center bg-gray-100 mt-1'>
+    <div className='w-screen md:h-auto flex flex-col items-center justify-center bg-gray-100 mt-1'>
 
       {/**Sessão 1*/}
       <motion.div
