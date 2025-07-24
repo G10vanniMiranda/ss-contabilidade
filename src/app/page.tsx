@@ -264,30 +264,58 @@ export default function Home() {
       {/**Sessão 6*/}
       <section className="w-full h-auto flex flex-col items-center justify-center bg-gray-500 py-10 px-4 md:px-20">
 
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Depoimentos de Clientes</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-3xl font-bold text-white text-center mb-6"
+        >
+          Depoimentos de Clientes
+        </motion.h2>
 
         <div className="flex flex-col md:flex-row gap-10 mt-10 items-center justify-center w-full md:max-w-6xl">
 
-          <DepoimentoCard
-            nome="João Silva"
-            imagem="/joao.jpg"
-            alt="João Silva"
-            depoimento="A SS Contabilidade transformou nossa gestão financeira! Com expertise em incentivos fiscais, recuperamos créditos tributários e melhoramos nossa eficiência. Recomendo a todos!"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+            className="transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <DepoimentoCard
+              nome="João Silva"
+              imagem="/joao.jpg"
+              alt="João Silva"
+              depoimento="A SS Contabilidade transformou nossa gestão financeira! Com expertise em incentivos fiscais, recuperamos créditos tributários e melhoramos nossa eficiência. Recomendo a todos!"
+            />
+          </motion.div>
 
-          <DepoimentoCard
-            nome="Maria Oliveira"
-            imagem="/maria.jpg"
-            alt="Maria Oliveira"
-            depoimento="A equipe da SS Contabilidade é extremamente profissional e dedicada. Graças a eles, conseguimos otimizar nossos processos e reduzir custos."
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+            className="transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <DepoimentoCard
+              nome="Maria Oliveira"
+              imagem="/maria.jpg"
+              alt="Maria Oliveira"
+              depoimento="A equipe da SS Contabilidade é extremamente profissional e dedicada. Graças a eles, conseguimos otimizar nossos processos e reduzir custos."
+            />
+          </motion.div>
 
-          <DepoimentoCard
-            nome="Carlos Pereira"
-            imagem="/carlos.jpg"
-            alt="Carlos Pereira"
-            depoimento="Excelente serviço! A SS Contabilidade nos ajudou a entender melhor nossos direitos e a aproveitar os incentivos fiscais disponíveis. Muito satisfeito!"
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+            className="transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <DepoimentoCard
+              nome="Carlos Pereira"
+              imagem="/carlos.jpg"
+              alt="Carlos Pereira"
+              depoimento="Excelente serviço! A SS Contabilidade nos ajudou a entender melhor nossos direitos e a aproveitar os incentivos fiscais disponíveis. Muito satisfeito!"
+            />
+          </motion.div>
 
         </div>
 
