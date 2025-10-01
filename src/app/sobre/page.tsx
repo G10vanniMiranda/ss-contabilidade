@@ -1,10 +1,12 @@
 'use client'
 
 import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Sobre() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center">
+        <div className="w-full h-auto flex flex-col items-center justify-center relative">
 
             {/* SOBRE */}
             <section className="w-full h-auto flex flex-col items-center gap-10 md:mt-20 p-2 md:p-4">
@@ -95,6 +97,31 @@ export default function Sobre() {
                 </div>
 
             </section>
+
+            {/** Botão do WhatsApp */}
+            <div className="fixed bottom-10 right-10 z-50">
+
+                <Link
+                    href="https://wa.me/5569993533868"
+                    className="flex items-center relative animate-pulse"
+                    aria-label="Abrir conversa no WhatsApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <p className="hidden md:block text-lg md:text-2xl text-white font-semibold bg-green-500 py-1 absolute right-[60px] w-48 px-3 rounded-l-full z-10">
+                        Contato rápido
+                    </p>
+                    <Image
+                        src="/whatsApp2.webp"
+                        alt="Ícone do WhatsApp"
+                        width={70}
+                        height={70}
+                        className="z-20"
+                        priority
+                    />
+                </Link>
+
+            </div>
 
         </div>
     );
