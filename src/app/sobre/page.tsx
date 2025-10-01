@@ -66,7 +66,7 @@ export default function Sobre() {
                     <div className="flex flex-col gap-2">
                         <h1 className="text-black text-xl font-semibold">Endereço</h1>
                         <p className="text-black w-720">
-                            Rua José de Alencar, 2322 - Sala 12, Centro - Porto Velho - RO
+                            Rua José de Alencar, 2322 - Sala 12, Centro - Porto Velho, RO
                         </p>
                     </div>
 
