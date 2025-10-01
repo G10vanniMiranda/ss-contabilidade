@@ -14,8 +14,8 @@ export default function Footer() {
 
                     <div className='flex flex-col gap-2'>
                         <h2 className='text-white'>Contabilidade e consultoria para todo o Brasil.</h2>
-                        <h2 className='text-white'>Localização: Avenida Presidente Dutra, 3500</h2>
-                        <h2 className='text-white'>Bairro Olaria - Porto Velho - RO</h2>
+                        <h2 className='text-white'>Localização: Rua Jose de Alencar, 2322 - Sala 12</h2>
+                        <h2 className='text-white'>Bairro: Centro - Porto Velho - RO</h2>
                     </div>
 
                     <div className='flex gap-4 py-2'>
