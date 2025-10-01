@@ -66,7 +66,7 @@ export default function Sobre() {
                     <div className="flex flex-col gap-2">
                         <h1 className="text-black text-xl font-semibold">Endereço</h1>
                         <p className="text-black w-720">
-                            Av Presidente Dutra, 3500, Olaria - Porto Velho - RO
+                            Rua José de Alencar, 2322 - Sala 12, Centro - Porto Velho - RO
                         </p>
                     </div>
 
@@ -83,7 +83,7 @@ export default function Sobre() {
 
                     <iframe
                         title="Mapa SS Contabilidade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2932830906016!2d-63.909705225179515!3d-8.758452189419272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cd761c80477%3A0xa85f9f01561561da!2sAv.%20Pres.%20Dutra%2C%203500%20-%20Olaria%2C%20Porto%20Velho%20-%20RO%2C%2076801-222!5e0!3m2!1spt-BR!2sbr!4v1751573866950!5m2!1spt-BR!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.1902701955!2d-63.90709522423679!3d-8.768161989550425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92325cdde5b590af%3A0xc5151e8ec61ebe79!2sR.%20Jos%C3%A9%20de%20Alencar%2C%202322%20-%20Baixa%20da%20Uni%C3%A3o%2C%20Porto%20Velho%20-%20RO%2C%2076805-880!5e0!3m2!1spt-BR!2sbr!4v1759327750943!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="320"
                         style={{ border: 0, borderRadius: '12px', maxWidth: 600 }}
