@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sobre() {
     return (
-        <div className="w-full h-auto flex flex-col items-center justify-center relative">
+        <div className="w-full h-auto flex flex-col items-center justify-center relative pt-10">
 
             {/* SOBRE */}
             <section className="w-full h-auto flex flex-col items-center gap-10 md:mt-20 p-2 md:p-4">

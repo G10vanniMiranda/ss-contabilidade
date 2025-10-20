@@ -19,6 +19,17 @@ export default function Menu() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Lock body scroll when menu is open (mobile)
+    useEffect(() => {
+        if (open) {
+            const original = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+            return () => {
+                document.body.style.overflow = original;
+            };
+        }
+    }, [open]);
+
     return (
         <div className={`fixed top-0 left-0 w-full h-20 md:h-28 z-50 bg-white flex items-center justify-between p-8 md:px-28 transition-shadow duration-300 ${scrolled ? "shadow-md border-b border-gray-200" : ""}`}>
             <Image src="/logo.png" alt="logo" width={100} height={100} />
@@ -61,13 +72,13 @@ export default function Menu() {
             </div>
 
             {open && (
-                <div className="md:hidden absolute top-0 left-0 w-full h-96 bg-white flex flex-col items-center justify-center gap-6">
+                <div role="dialog" aria-modal="true" className="md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur flex flex-col items-center justify-center gap-6 z-50">
 
                     <div className='absolute top-4 right-4 cursor-pointer' onClick={() => setOpen(false)}>
                         <IoIosCloseCircleOutline className='text-black text-3xl' />
                     </div>
 
-                    <div className='flex flex-col items-center gap-4'>
+                    <div className='flex flex-col items-center gap-4 mt-10'>
                         <Link
                             href="/"
                             onClick={() => setOpen(false)}
