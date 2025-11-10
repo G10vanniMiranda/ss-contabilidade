@@ -421,9 +421,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="hidden md:block text-lg md:text-2xl text-white font-semibold bg-green-500 py-1 absolute right-[60px] w-48 px-3 rounded-l-full z-10">
-            Contato rápido
-          </p>
           <Image
             src="/whatsApp2.webp"
             alt="Ícone do WhatsApp"
