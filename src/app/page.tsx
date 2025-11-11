@@ -376,17 +376,11 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-[-10] brightness-[0.5]"
+          className="absolute inset-0 w-full h-full object-cover z-0 brightness-[0.5] pointer-events-none"
         >
           <source src="/videos/video2.mp4" type="video/mp4" />
         </video>
 
-        {/* Luz metálica IA */}
-        <motion.div
-          className="absolute -top-40 left-1/3 w-[500px] h-[500px] bg-gray-400/20 blur-[180px] rounded-full"
-          animate={{ x: [0, 40, -40, 0], y: [0, 30, -30, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        />
 
         {/* Conteúdo */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-6">
