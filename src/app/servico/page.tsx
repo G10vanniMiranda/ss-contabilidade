@@ -28,7 +28,7 @@ export default function Servico() {
             {/* Primeira linha */}
             <MotionFadeIn
                 delay={0.1}
-                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16"
+                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 place-items-center"
             >
                 <ServicoCard
                     imagem="/anexo1.avif"
@@ -53,7 +53,7 @@ export default function Servico() {
             {/* Segunda linha */}
             <MotionFadeIn
                 delay={0.2}
-                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16"
+                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 place-items-center"
             >
                 <ServicoCard
                     imagem="/anexo3.avif"
@@ -77,7 +77,7 @@ export default function Servico() {
             {/* Terceira linha */}
             <MotionFadeIn
                 delay={0.3}
-                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16"
+                className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 place-items-center"
             >
                 <ServicoCard
                     imagem="/anexo5.avif"

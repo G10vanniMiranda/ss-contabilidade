@@ -22,8 +22,8 @@ export default function ServicoCard({
     className,
 }: ServicoCardProps) {
     return (
-        <div className="w-auto gap-4 mt-4 md:mt-8 pb-32 md:pb-28 relative">
-            <div className="relative w-[300px] md:w-[350px] lg:w-[480px] xl:w-[560px] h-72 mt-8 md:mt-0">
+        <div className="w-full flex justify-center mt-4 md:mt-8 pb-32 md:pb-28 relative">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-72 mt-8 md:mt-0">
                 <Image
                     src={imagem}
                     quality={100}
@@ -31,12 +31,12 @@ export default function ServicoCard({
                     alt={titulo}
                     className="rounded-xl object-cover"
                     priority={priorityImage}
-                    sizes="(max-width: 768px) 300px, (max-width: 1024px) 350px, 560px"
+                    sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 512px, 576px"
                 />
 
                 <div
                     className={[
-                        "absolute left-1/2 -translate-x-1/2 -bottom-28 w-72 md:w-[88%] h-40 px-4 py-3 backdrop-blur-sm rounded-xl flex flex-col items-center",
+                        "absolute left-1/2 -translate-x-1/2 -bottom-28 w-[88%] h-40 px-4 py-3 backdrop-blur-sm rounded-xl flex flex-col items-center",
                         // Se receber classe 'glass', evitamos o fundo sólido padrão para não conflitar
                         className && className.includes('glass')
                             ? ""
