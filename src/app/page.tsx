@@ -30,15 +30,24 @@ export default function Home() {
   return (
     <div className='w-screen md:h-auto flex flex-col items-center justify-center bg-gray-100 mt-1 relative'>
 
-      {/**Seção 1*/}
-      <motion.div
+      {/** Seção 1 — Hero otimizada com Next/Image e blur */}
+      <motion.section
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -100 }}
-        transition={{ duration: .8, ease: "easeInOut" }}
-        className="w-full h-64 -mt-1 md:h-[690px] bg-[url(/imagem.jpg)] bg-cover bg-center bg-no-repeat"
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="relative w-full h-[400px] md:h-[690px] overflow-hidden"
       >
-      </motion.div>
+        {/* Imagem otimizada */}
+        <Image
+          src="/imagem.jpg"
+          alt="Consultoria Contábil"
+          fill
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMB/ajNqV8AAAAASUVORK5CYII="
+          className="object-cover brightness-[0.9]"
+        />
+      </motion.section>
 
       {/**Seção 2 – Vídeo institucional com overlay cinza sofisticado*/}
       <motion.div
@@ -48,6 +57,7 @@ export default function Home() {
         transition={{ duration: 1.2, ease: "easeInOut" }}
         className="relative w-full h-96 md:h-[690px] overflow-hidden bg-[#2A2A2A]"
       >
+
         {/* Vídeo de fundo */}
         <video
           autoPlay
@@ -72,6 +82,7 @@ export default function Home() {
 
         {/* Conteúdo central */}
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">
+
           <h1 className="text-gray-100 text-4xl md:text-6xl font-bold text-center tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.15)]">
             Consultoria Contábil <br /> Especializada para Você
           </h1>
@@ -84,14 +95,15 @@ export default function Home() {
 
           <div className="flex space-x-2 mt-8">
             {[...Array(5)].map((_, i) => (
-              <FaStar key={i} className="text-yellow-400 opacity-90 animate-pulse" />
+              <FaStar key={i}
+                className="text-yellow-400 opacity-90 animate-pulse" />
             ))}
           </div>
-
           <p className="text-gray-300 text-lg md:text-xl mt-1 font-medium">
             5 ESTRELAS DE SATISFAÇÃO
           </p>
         </div>
+
       </motion.div>
 
       {/**Seção 3*/}
