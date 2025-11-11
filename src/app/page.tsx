@@ -346,7 +346,7 @@ export default function Home() {
                     height={80}
                     className="rounded-full object-cover border border-gray-500"
                   />
-                  <p className="text-gray-300 italic leading-relaxed">"{pessoa.texto}"</p>
+                  <p className="text-gray-300 italic leading-relaxed">&ldquo;{pessoa.texto}&rdquo;</p>
                   <h3 className="font-semibold text-lg text-gray-100">{pessoa.nome}</h3>
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (

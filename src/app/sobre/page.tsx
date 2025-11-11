@@ -1,8 +1,7 @@
 'use client'
 
 import { motion } from "motion/react";
-import Image from "next/image";
-import Link from "next/link";
+// removed unused Image and Link imports
 import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Sobre() {

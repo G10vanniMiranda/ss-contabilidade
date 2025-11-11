@@ -1,6 +1,5 @@
 import ServicoCard from "../components/ServicoCard";
-import Image from "next/image";
-import Link from "next/link";
+// removed unused Image and Link imports
 import WhatsAppButton from "../components/WhatsAppButton";
 import SectionHeader from "../components/SectionHeader";
 import MotionFadeIn from "../components/MotionFadeIn";
