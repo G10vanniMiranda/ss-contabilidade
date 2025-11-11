@@ -41,9 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gray-50`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-brandGray-600 text-white`}>
         <Menu />
-        <main className="pt-10 md:pt-18">
+        <main className="pt-20 md:pt-28">
           {children}
         </main>
         <Footer />

@@ -35,7 +35,7 @@ export default function CardIncentivos({
                 {botaoTexto && botaoLink && (
                     <Link
                         href={botaoLink}
-                        className="mt-2 px-5 py-2 bg-green-600 text-white rounded-lg font-medium shadow hover:bg-green-700 transition"
+                        className="mt-2 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-6 py-2 rounded-xl text-white font-semibold shadow-lg hover:shadow-blue-500/30 transition focus:outline-none focus:ring-2 focus:ring-blue-400/50"
                     >
                         {botaoTexto}
                     </Link>

@@ -20,7 +20,7 @@ export default function SectionHeader({ title, subtitle, align = "center", class
       className={`flex flex-col ${alignment} ${className}`}
     >
       <h2 className="text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
-      {subtitle && <p className="mt-2 text-base md:text-lg text-gray-600 max-w-2xl">{subtitle}</p>}
+      {subtitle && <p className="mt-2 text-base md:text-lg text-white/90 max-w-2xl">{subtitle}</p>}
     </motion.div>
   );
 }

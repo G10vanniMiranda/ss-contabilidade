@@ -9,6 +9,7 @@ interface ServicoCardProps {
     ctaHref?: string;
     ctaLabel?: string;
     priorityImage?: boolean;
+    className?: string;
 }
 
 export default function ServicoCard({
@@ -16,44 +17,47 @@ export default function ServicoCard({
     titulo,
     descricao,
     ctaHref,
-    ctaLabel = "Saiba mais",
+    ctaLabel = "Falar com especialista",
     priorityImage = false,
+    className,
 }: ServicoCardProps) {
     return (
-        <div className="w-auto gap-4 mt-4 md:mt-8 relative">
-
-            <div className="w-[300px] md:w-[350px] lg:w-[490px] xl:w-[600px] h-72 flex flex-col md:flex-row items-center justify-center mt-10 md:mt-0 relative">
-
+        <div className="w-auto gap-4 mt-4 md:mt-8 pb-32 md:pb-28 relative">
+            <div className="relative w-[300px] md:w-[350px] lg:w-[480px] xl:w-[560px] h-72 mt-8 md:mt-0">
                 <Image
                     src={imagem}
                     quality={100}
                     fill
                     alt={titulo}
-                    className="rounded-xl object-cover relative z-0"
+                    className="rounded-xl object-cover"
                     priority={priorityImage}
-                    sizes="(max-width: 768px) 300px, (max-width: 1024px) 350px, 600px"
+                    sizes="(max-width: 768px) 300px, (max-width: 1024px) 350px, 560px"
                 />
 
-                <div className="w-72 h-36 md:w-[90%] flex flex-col items-center p-2 bg-white absolute left-1/2 -translate-x-1/2 -bottom-28 z-10 rounded-xl shadow-md">
-
-                    <h3 className="text-lg font-semibold text-center mt-2">{titulo}</h3>
-
-                    <p className="mt-2 text-center text-sm text-gray-600">{descricao}</p>
+                <div
+                    className={[
+                        "absolute left-1/2 -translate-x-1/2 -bottom-28 w-72 md:w-[88%] h-40 px-4 py-3 backdrop-blur-sm rounded-xl flex flex-col items-center",
+                        // Se receber classe 'glass', evitamos o fundo sólido padrão para não conflitar
+                        className && className.includes('glass')
+                            ? ""
+                            : "bg-[#1E1E1E]/95 border border-[#2F2F2F] shadow-lg",
+                        className || ""
+                    ].join(' ').trim()}
+                >
+                    <h3 className="text-lg font-semibold text-center mt-1 text-white tracking-tight">{titulo}</h3>
+                    <p className="mt-2 text-center text-sm text-gray-300 leading-relaxed">{descricao}</p>
 
                     {ctaHref && (
                         <Link
-                          href={ctaHref}
-                          className="mt-3 inline-flex px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
-                          aria-label={`${ctaLabel} - ${titulo}`}
+                            href={ctaHref}
+                            className="mt-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-5 py-2 rounded-xl text-white text-sm font-semibold shadow-lg hover:shadow-blue-500/30 transition focus:outline-none focus:ring-2 focus:ring-blue-400/50"
+                            aria-label={`${ctaLabel} - ${titulo}`}
                         >
-                          {ctaLabel}
+                            {ctaLabel}
                         </Link>
                     )}
-
                 </div>
-
             </div>
-
         </div>
     );
 }

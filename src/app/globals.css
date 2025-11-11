@@ -2,6 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #1C1C1C;
+  color: #EAEAEA;
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
+}
+
+/* Textura metálica leve fixa no fundo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.02),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255, 255, 255, 0.03),
+      transparent 60%
+    );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Tipografia elegante */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Efeito metálico no texto */
+.text-metallic {
+  background: linear-gradient(90deg, #D9D9D9, #AFAFAF, #D9D9D9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Vidro translúcido utilitário */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+/* Orb de luz (IA) animado */
+.light-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(160px);
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.65; }
+  50% { transform: translate3d(0, -18px, 0); opacity: 0.9; }
 }

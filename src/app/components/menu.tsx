@@ -7,109 +7,107 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 export default function Menu() {
-    const [open, setOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-    const pathname = usePathname();
+    const [open, setOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        const handleScroll = () => setScrolled(window.scrollY > 10)
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
-    // Lock body scroll when menu is open (mobile)
     useEffect(() => {
         if (open) {
-            const original = document.body.style.overflow;
-            document.body.style.overflow = 'hidden';
-            return () => {
-                document.body.style.overflow = original;
-            };
+            const original = document.body.style.overflow
+            document.body.style.overflow = 'hidden'
+                return () => {
+                    document.body.style.overflow = original
+                }
         }
-    }, [open]);
+    }, [open])
 
     return (
-        <div className={`fixed top-0 left-0 w-full h-20 md:h-28 z-50 bg-white flex items-center justify-between p-8 md:px-28 transition-shadow duration-300 ${scrolled ? "shadow-md border-b border-gray-200" : ""}`}>
-            <Image src="/logo.png" alt="logo" width={100} height={100} />
+            <header
+                className={`site-header fixed top-0 left-0 right-0 w-screen z-[100] transition-all duration-300 will-change-transform ${
+                scrolled
+                    ? 'backdrop-blur-md bg-[#1C1C1C]/90 shadow-[0_0_25px_rgba(255,255,255,0.05)] border-b border-[#3A3A3A]/50'
+                    : 'bg-gradient-to-b from-[#2A2A2A]/80 via-[#1C1C1C]/60 to-transparent'
+            }`}
+        >
+            <div className="flex items-center justify-between h-20 md:h-28 px-6 md:px-28">
+                {/* Logo */}
+                <Image src="/logo-branca.png" alt="logo" width={100} height={100} priority />
 
-            <button
-                className="md:hidden flex flex-col justify-center items-center"
-                onClick={() => setOpen(!open)}
-                aria-label="Abrir menu"
-            >
-                <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
-                <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
-                <span className="block w-8 h-1 bg-black mb-1 rounded"></span>
-
-            </button>
-
-            <div className='hidden md:flex items-center gap-10'>
-                <Link
-                    href="/"
-                    className={`text-black border-b-2 transition ${pathname === "/" ? "border-black" : "border-transparent hover:border-black"
-                        }`}
+                {/* Botão hamburguer (mobile) */}
+                <button
+                    className="md:hidden flex flex-col justify-center items-center space-y-1"
+                    onClick={() => setOpen(!open)}
+                    aria-label="Abrir menu"
                 >
-                    Inicio
-                </Link>
+                    <span className="block w-8 h-1 bg-gray-300 rounded"></span>
+                    <span className="block w-8 h-1 bg-gray-300 rounded"></span>
+                    <span className="block w-8 h-1 bg-gray-300 rounded"></span>
+                </button>
 
-                <Link
-                    href="/servico"
-                    className={`text-black border-b-2 transition ${pathname === "/servico" ? "border-black" : "border-transparent hover:border-black"
-                        }`}
-                >
-                    Serviços
-                </Link>
-
-                <Link
-                    href="/sobre"
-                    className={`text-black border-b-2 transition ${pathname === "/sobre" ? "border-black" : "border-transparent hover:border-black"
-                        }`}
-                >
-                    Sobre
-                </Link>
+                {/* Menu desktop */}
+                <nav className="hidden md:flex items-center gap-12">
+                    {[
+                        { href: '/', label: 'Início' },
+                        { href: '/servico', label: 'Serviços' },
+                        { href: '/sobre', label: 'Sobre' },
+                    ].map(({ href, label }) => (
+                        <Link
+                            key={href}
+                            href={href}
+                            className={`relative text-gray-200 tracking-wide transition group ${
+                                pathname === href ? 'text-gray-100' : 'hover:text-gray-50'
+                            }`}
+                        >
+                            {label}
+                            <span
+                                className={`absolute bottom-[-6px] left-0 h-[2px] w-0 bg-gradient-to-r from-gray-400 to-gray-100 rounded-full transition-all duration-300 group-hover:w-full ${
+                                    pathname === href ? 'w-full' : ''
+                                }`}
+                            ></span>
+                        </Link>
+                    ))}
+                </nav>
             </div>
 
-            {open && (
-                <div role="dialog" aria-modal="true" className="md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur flex flex-col items-center justify-center gap-6 z-50">
+            {/* Menu Mobile */}
+                    {open && (
+                        <div className="fixed inset-0 bg-[#1C1C1C]/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6 z-[110] animate-fade-in">
+                    <button
+                        className="absolute top-6 right-6 text-gray-300 hover:text-white transition"
+                        onClick={() => setOpen(false)}
+                    >
+                        <IoIosCloseCircleOutline className="text-4xl" />
+                    </button>
 
-                    <div className='absolute top-4 right-4 cursor-pointer' onClick={() => setOpen(false)}>
-                        <IoIosCloseCircleOutline className='text-black text-3xl' />
-                    </div>
-
-                    <div className='flex flex-col items-center gap-4 mt-10'>
+                    {[
+                        { href: '/', label: 'Início' },
+                        { href: '/servico', label: 'Serviços' },
+                        { href: '/sobre', label: 'Sobre' },
+                    ].map(({ href, label }) => (
                         <Link
-                            href="/"
+                            key={href}
+                            href={href}
                             onClick={() => setOpen(false)}
-                            className={`text-black border-b-2 transition ${pathname === "/" ? "border-black" : "border-transparent hover:border-black"
-                                }`}
+                            className={`text-gray-200 text-2xl tracking-wide relative group ${
+                                pathname === href ? 'text-white' : 'hover:text-gray-50'
+                            }`}
                         >
-                            Inicio
-                        </Link>
-
-                        <Link
-                            href="/servico"
-                            onClick={() => setOpen(false)}
-                            className={`text-black border-b-2 transition ${pathname === "/servico" ? "border-black" : "border-transparent hover:border-black"
+                            {label}
+                            <span
+                                className={`absolute bottom-[-4px] left-0 h-[2px] w-0 bg-gradient-to-r from-gray-400 to-gray-100 rounded-full transition-all duration-300 group-hover:w-full ${
+                                    pathname === href ? 'w-full' : ''
                                 }`}
-                        >
-                            Serviços
+                            ></span>
                         </Link>
-
-                        <Link
-                            href="/sobre"
-                            onClick={() => setOpen(false)}
-                            className={`text-black border-b-2 transition ${pathname === "/sobre" ? "border-black" : "border-transparent hover:border-black"
-                                }`}
-                        >
-                            Sobre
-                        </Link>
-                    </div>
-
+                    ))}
                 </div>
             )}
-
-        </div>
+        </header>
     )
 }

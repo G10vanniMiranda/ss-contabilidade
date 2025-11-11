@@ -7,9 +7,9 @@ export default function SaibaMAisButton() {
             href="https://wa.me/5569993533868"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 px-6 py-3 bg-zinc-500 text-white rounded-full font-semibold shadow hover:bg-zinc-700 transition"
+            className="mt-8 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-8 py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-blue-500/30 transition focus:outline-none focus:ring-4 focus:ring-blue-400/40"
         >
-            Saiba mais
+            Fale com um Especialista
         </Link>
     );
 }
